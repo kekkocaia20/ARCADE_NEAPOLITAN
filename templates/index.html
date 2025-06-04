@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="bg-video" onloadeddata="showContent()">
+        <source src="/static/video/video.mp4" type="video/mp4">
+      </video>      
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-md">
+          <img src="/static/img/arcade_logo.png" alt="Logo" class="navbar-logo">
+          <a class="navbar-brand" href="{{ url_for('home') }}">ARCADE GAME</a>
+        </div>
+      </nav>
+
+
+      <!-- Game Menu -->
+<div class="game-menu">
+  <h1 class="menu-title">Choose Your Game</h1>
+  <ul class="menu-list">
+    <li><a href="{{ url_for('numero') }}" class="menu-item">Guess The Number</a></li>
+    <li><a href="{{ url_for('colore') }}" class="menu-item">Guess The Color</a></li>
+    <li><a href="{{ url_for('prigioniero') }}" class="menu-item">The Prisoner And The Door</a></li>
+    <li><a href="{{ url_for('true_or_false') }}" class="menu-item">True Or False</a></li>
+  </ul>          
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="arcade-text">&copy; 2025 Arcade Game. Tutti i diritti riservati.</p>
+    <div class="social-icons d-flex justify-content-center gap-4 mt-3">
+      <!-- GitHub -->
+      <a href="https://github.com/kekkocaia20" target="_blank" class="text-white d-flex align-items-center gap-2">
+        <i class="fab fa-github fa-lg"></i>
+        <span class="arcade-text">GitHub</span>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/francesco-caianiello-065525197/" target="_blank" class="text-white d-flex align-items-center gap-2">
+        <i class="fab fa-linkedin fa-lg"></i>
+        <span class="arcade-text">LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+      
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/index.js"></script>
+</body>
+</html>

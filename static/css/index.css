@@ -1,0 +1,278 @@
+/* ======= GENERALI ======= */
+html, body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #f8f9fa;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Permette al contenuto di crescere e spingere il footer in basso */
+body {
+    flex: 1;
+    position: relative;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* prende tutta l'altezza viewport */
+}
+
+/* Video di sfondo */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* dietro tutto */
+    object-fit: cover;
+  }
+
+/* ======= NAVBAR ======= */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4); /* sfondo nero semi-trasparente */
+    backdrop-filter: blur(4px); /* sfocatura dietro */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #f8c146;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+}
+
+/* ======= FOOTER ======= */
+.footer {
+    background-color: rgba(0, 0, 0, 0.4); /* nero trasparente */
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Magia: spinge il footer in fondo */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ======= SOCIAL ICONS ======= */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f8c146;
+}
+
+/* Font arcade */
+.arcade-text {
+    font-size: 0.7rem;
+}
+
+/* Icone hover */
+.footer .fab:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Font arcade */
+.menu-title, .menu-item {
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Contenitore del menu */
+  .game-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Titolo del menu */
+  .menu-title {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Lista dei giochi */
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Elementi della lista */
+  .menu-item {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  /* Effetto hover */
+  .menu-item:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffcc00;
+  }
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 992px) {
+    .menu-item {
+      font-size: 1rem; /* Aumento per tablet come iPad Air */
+      padding: 18px 30px; /* Più padding per maggiore visibilità */
+    }
+  
+    .menu-title {
+      font-size: 1.4rem; /* Aumento per il titolo del menu su tablet */
+    }
+  
+    .navbar-brand {
+      font-size: 1.3rem;
+    }
+  
+    .footer p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Tablet con schermo più grande, come iPad Air e Pro */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .menu-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px; /* Maggiore distanza tra le voci del menu */
+    }
+  
+    .menu-item {
+      width: 100%;
+      max-width: 400px; /* Maggiore larghezza per voci del menu */
+      font-size: 1.2rem; /* Font più grande su iPad */
+      padding: 20px 35px; /* Maggiore padding */
+    }
+  
+    .menu-title {
+      font-size: 1.7rem; /* Aumento per il titolo su tablet grandi */
+    }
+  
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    .footer p {
+      font-size: 1.1rem;
+    }
+  
+    .social-icons {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .social-icons a {
+      font-size: 1.5rem; /* Aumento per visibilità */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Maggiore distanza tra le voci del menu */
+    }
+  
+    .menu-item {
+      width: 100%;
+      max-width: 350px; /* Maggiore larghezza per voci del menu */
+      font-size: 1.1rem; /* Aumento per migliorare la visibilità */
+      padding: 18px 30px; /* Maggiore padding */
+    }
+  
+    .menu-title {
+      font-size: 1.5rem; /* Aumento per il titolo */
+    }
+  
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .footer p {
+      font-size: 0.9rem;
+    }
+  
+    .social-icons {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    .social-icons a {
+      font-size: 1.3rem; /* Aumento per visibilità */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-title {
+      font-size: 1.1rem; /* Aumento per visibilità su schermi piccoli */
+    }
+  
+    .menu-item {
+      font-size: 0.9rem; /* Aumento per maggiore leggibilità */
+      padding: 12px 20px;
+      max-width: 250px; /* Maggiore spazio per ogni voce */
+    }
+  
+    .navbar-logo {
+      height: 35px; /* Aumento della dimensione del logo */
+    }
+  
+    .footer p {
+      font-size: 0.8rem; /* Più grande per migliorare la leggibilità */
+    }
+  
+    .social-icons a {
+      font-size: 1.1rem; /* Aumento per visibilità */
+    }
+  }
+  
+  
+

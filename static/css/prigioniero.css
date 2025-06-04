@@ -1,0 +1,220 @@
+/* Stile arcade per il Prisoner Game */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #0f0f1f; /* già presente */
+    color: #39ff14;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+h1, h3 {
+    text-shadow:
+        2px 2px 0 #ff00ff, /* magenta */
+        -2px -2px 0 #00ffff; /* ciano */
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    background: #111122;
+    border: 4px solid #39ff14;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-select {
+    background: #222233;
+    color: #39ff14;
+    border: 3px solid #39ff14;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    padding: 0.7rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-select:hover, .form-select:focus {
+    background: #39ff14;
+    color: #111122;
+    outline: none;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #111122;
+    background-color: #39ff14;
+    border: 3px solid #00ffff;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+    text-shadow: none;
+}
+
+button:hover {
+    background-color: #00ffff;
+    color: #0f0f1f;
+    border-color: #ff00ff;
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 30px #ff00ff;
+}
+
+.alert-success {
+    text-align: center; /* aggiunto per centratura testo */
+    background-color: #002200;
+    border: 2px solid #39ff14;
+    color: #39ff14;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    text-shadow:
+        1px 1px 0 #004400;
+}
+
+.alert-danger {
+    text-align: center; /* aggiunto per centratura testo */
+    background-color: #220000;
+    border: 2px solid #ff0044;
+    color: #ff0044;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    text-shadow:
+        1px 1px 0 #440000;
+}
+
+.text-info {
+    color: #00ffff;
+    text-shadow: 1px 1px 0 #004444;
+    font-weight: bold;
+}
+
+a {
+    color: #ff00ff;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #000000;
+}
+
+a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.arcade-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #0f0f1f;
+    background-color: #39ff14;
+    border: 3px solid #00ffff;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #39ff14;
+}
+
+.arcade-btn:hover {
+    background-color: #00ffff;
+    color: #0f0f1f;
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #ff00ff,
+        0 0 45px #39ff14;
+}
+
+.arcade-btn:focus {
+    outline: none;
+    box-shadow:
+        0 0 20px #ff00ff,
+        0 0 40px #00ffff;
+}
+
+.btn-group-nowrap {
+    display: flex;
+    gap: 1rem; /* come gap-3 di Bootstrap, che è 1rem circa */
+    justify-content: center;
+    flex-wrap: nowrap; /* NO ritorno a capo */
+    align-items: center; /* per allineare verticalmente i bottoni */
+}
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    h1, h3 {
+        font-size: 1.2rem;
+    }
+
+    button, .arcade-btn {
+        font-size: 0.6rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .form-select {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Smartphone (max 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    h1, h3 {
+        font-size: 1rem;
+    }
+
+    button, .arcade-btn {
+        font-size: 0.55rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .form-select {
+        font-size: 0.55rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Piccoli smartphone (max 480px) */
+@media (max-width: 480px) {
+    h1, h3 {
+        font-size: 0.8rem;
+    }
+
+    button, .arcade-btn {
+        font-size: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .form-select {
+        font-size: 0.5rem;
+        padding: 0.4rem;
+    }
+
+    body {
+        padding: 1rem;
+    }
+}

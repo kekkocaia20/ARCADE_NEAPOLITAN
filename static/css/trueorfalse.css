@@ -1,0 +1,210 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video di sfondo */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* dietro tutto */
+    object-fit: cover;
+  }
+
+  .game-container {
+    background-color: rgba(255, 255, 255, 0.15); /* semi-trasparente bianco */
+    backdrop-filter: blur(10px); /* sfoca solo il video dietro */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 2px solid #0096e6;
+    box-shadow: 0 0 15px #0096e6;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+}
+
+h1, h2 {
+    color: #0096e6;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* spazio tra i bottoni */
+}
+
+.btn-true {
+    background-color: #03631C;
+    border: 2px solid #03631C;
+    margin: 1rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.btn-false {
+    background-color: #A10C04;
+    border: 2px solid #A10C04;
+    margin: 1rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.btn-true, .btn-false {
+    display: flex;            /* usa flexbox */
+    justify-content: center;  /* centra orizzontalmente */
+    align-items: center;      /* centra verticalmente */
+    font-size: 1.5rem;        /* dimensione icona, puoi regolare */
+    padding: 0.5rem 1rem;     /* spazio interno bottone */
+    width: 3.5rem;            /* larghezza fissa per bottone quadrato */
+    height: 3.5rem;           /* altezza fissa per bottone quadrato */
+    border-radius: 0.5rem;    /* arrotondamento */
+    margin: 0 0.5rem;         /* margine tra i bottoni */
+}
+
+.btn-home {
+    background-color: white;
+    border: 2px solid #0096e6;
+    color: #0096e6;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #0096e6;
+    color: white;
+    text-decoration: none;
+}
+
+a.btn-home {
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.domanda-testo {
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.domanda_completata{
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Dispositivi piccoli (telefoni in portrait) */
+@media (max-width: 480px) {
+    html, body {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .game-container {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 0.9rem;
+    }
+
+    .domanda-testo, .domanda_completata {
+        font-size: 0.75rem;
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* forziamo stessa riga */
+        gap: 0.5rem;
+    }
+    
+    .btn-true,
+    .btn-false {
+        font-size: 1.2rem;    /* riduci dimensione icona su telefoni */
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0.3rem;
+    }    
+
+    .btn-home {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Dispositivi medi (telefoni grandi e tablet in portrait) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .game-container {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+
+    h1, h2 {
+        font-size: 1.1rem;
+    }
+
+    .domanda-testo, .domanda_completata {
+        font-size: 0.85rem;
+    }
+
+    .btn-true, .btn-home, .btn-false {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Dispositivi grandi (tablet landscape e piccoli laptop) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .game-container {
+        padding: 2rem;
+        max-width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    .domanda-testo, .domanda_completata {
+        font-size: 0.9rem;
+    }
+
+    .btn-true, .btn-home, .btn-false{
+        font-size: 0.75rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Dispositivi extra-large (laptop grandi e desktop) */
+@media (min-width: 1025px) {
+    .game-container {
+        padding: 2rem;
+        max-width: 720px;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+    }
+
+    .domanda-testo, .domanda_completata {
+        font-size: 1rem;
+    }
+
+    .btn-true, .btn-home, .btn-false {
+        font-size: 0.75rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+

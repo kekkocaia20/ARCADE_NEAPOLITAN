@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    color: #39ff14;
+    font-family: 'Press Start 2P', cursive;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Video di sfondo */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* dietro tutto */
+    object-fit: cover;
+  }
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altezza piena dello schermo */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.game-box {
+    background-color: #111;
+    border: 4px double #ff00ff;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 20px #39ff14;
+}
+
+/* Titolo */
+h1 {
+    color: #ff00ff;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Input numero */
+input[type="number"] {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 2px solid #39ff14;
+    background: black;
+    color: #39ff14;
+    width: 60%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Bottone */
+button {
+    background-color: #ff00ff;
+    color: black;
+    font-size: 0.8rem;
+    border: 2px solid #39ff14;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #39ff14;
+    color: black;
+}
+
+/* Link */
+a {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #00ffff;
+}
+
+/* Messaggi */
+.success {
+    color: #00ff00;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.info {
+    margin-top: 1rem;
+    color: #39ff14;
+    font-size: 1rem;
+}
+
+/* Rimuove i bottoni numerici nei browser WebKit */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ✅ TABLET e SMALL LAPTOP */
+@media (max-width: 1024px) {
+    .game-box {
+        padding: 3rem;
+        box-shadow: 0 0 40px #39ff14;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    input[type="number"],
+    select,
+    button {
+        font-size: 1.6rem;
+        padding: 18px;
+    }
+}
+
+/* ✅ SMARTPHONE GRANDE (es. iPhone 14 Pro Max) */
+@media (max-width: 600px) {
+    .game-box {
+        padding: 2.5rem;
+        box-shadow: 0 0 32px #39ff14;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    input[type="number"],
+    select,
+    button {
+        font-size: 1.4rem;
+        padding: 16px;
+    }
+}
+
+/* ✅ SMARTPHONE PICCOLO (es. iPhone SE) */
+@media (max-width: 400px) {
+    .game-box {
+        padding: 2rem;
+        box-shadow: 0 0 28px #39ff14;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="number"],
+    select,
+    button {
+        font-size: 1.3rem;
+        padding: 14px;
+    }
+}
